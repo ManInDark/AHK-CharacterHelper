@@ -1,0 +1,62 @@
+Greek letters:
+  alpha: ɑ
+  beta: β
+  gamma: γ
+  delta: δ
+  epsilon: ε
+  zeta: ζ
+  eta: η
+  theta: θ
+  iota: ι
+  kappa: κ
+  lambda: λ
+  mu: μ
+  nu: ν
+  xi: ξ
+  omikron: ο
+  pi: π
+  rho: ρ
+  sigma: σ
+  tau: τ
+  upsilon: υ
+  phi: φ
+  chi: χ
+  psi: ψ
+  omega: ω
+  stigma: ϛ
+  digamma: ϝ
+  koppa: ϟ
+  sampi: ϡ
+  sho: ϸ
+  san: ϻ
+
+$Mathematical characters:
+  infinity: ∞
+  average: Ø
+  rationalnumbers: ℝ
+  naturalnumbers: ℕ
+  definitionset: ⅅ
+  squareroot: √
+  forbidden: ↯
+  !=: ≠
+  <=: ≤
+  >=: ≥
+  ~=: ≈
+  ^=: ≙
+  ?=: ≟
+  +-: ±
+
+$Physic characters:
+  ohm: Ω
+
+Formatting characters:
+  delimiter_open: ├
+  delimiter_close: ┤
+  upthingy: ┴
+  downthingy: ┬
+  encase: ▭
+  overbar: ¯
+  underbar: ▁
+  upstretchy: ⏞
+  downstretchy: ⏟
+  array: █
