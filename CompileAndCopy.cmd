@@ -1,2 +1,3 @@
 "C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in "AutoHotkey Script Letters.ahk" /out "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\AutoHotkey Script Letters.exe"
-copy helpfile.txt "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\helpfile.txt"
+mkdir "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\AHK-Resources"
+copy helpfile.txt "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\AHK-Resources\helpfile.txt"
