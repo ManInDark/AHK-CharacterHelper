@@ -64,16 +64,16 @@ $Physic characters:
   ohm: Ω
 
 Arrows
-  |arrowleft: ↤
-  |arrowup: ↥
-  |arrowright: ↦
-  |arrowdown: ↧
-  /arrowleft: ↼
-  /arrowright: ⇀
-  arrowleft: ←
-  arrowup: ↑
-  arrowright: →
-  arrowdown: ↓
+  |-<: ↤
+  |-^: ↥
+  |->: ↦
+  |-v: ↧
+  /-<: ↼
+  /->: ⇀
+  -<: ←
+  -^: ↑
+  ->: →
+  -v: ↓
   =<: ⇐
   =^: ⇑
   =>: ⇒
