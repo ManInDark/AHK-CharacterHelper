@@ -1,0 +1,22 @@
+name: Build Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@master
+
+      # Runs a single command using the runners shell
+      - name: Build
+        run: |
+          (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk-install.exe", "Installer.exe")
+          .\Installer.exe /S
+          cmd /C CompileAndCopy.cmd
