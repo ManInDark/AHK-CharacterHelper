@@ -41,6 +41,8 @@ $Mathematical characters:
   ringoperator: ∘
   squareroot: √
   forbidden: ↯
+  vertical_from: ⊤
+  vertical_on: ⊥
   !=: ≠
   <=: ≤
   >=: ≥
