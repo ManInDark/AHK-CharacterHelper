@@ -11,8 +11,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout Master
-      - uses: actions/checkout@master
+        id: checkout
+        uses: actions/checkout@master
       - name: Build
+        id: build
         run: |
           (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk-install.exe", "Installer.exe")
           .\Installer.exe /S
@@ -30,6 +32,7 @@ jobs:
           prerelease: false
       - name: Upload helpfile
         id: upload-helpfile
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -39,6 +42,7 @@ jobs:
           asset_content_type: text/plain
       - name: Upload Letters
         id: upload-letters
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -48,6 +52,7 @@ jobs:
           asset_content_type: application/vnd.microsoft.portable-executable
       - name: Upload SoundControl
         id: upload-soundcontrol
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

@@ -6,13 +6,15 @@ on:
   pull_request:
     branches: [ master ]
   workflow_dispatch:
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: windows-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@master
+      - name: Checkout Master
+        uses: actions/checkout@master
 
       # Runs a single command using the runners shell
       - name: Build
