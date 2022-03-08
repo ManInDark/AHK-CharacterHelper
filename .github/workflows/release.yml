@@ -18,8 +18,8 @@ jobs:
         run: |
           (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk-install.exe", "Installer.exe")
           .\Installer.exe /S
-          cmd /C 'C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in "AutoHotkey Script Letters.ahk" /out "AutoHotkey Script Letters.exe'
-          cmd /C 'C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in "AutoHotkey Script SoundControl.ahk" /out "AutoHotkey Script SoundControl.exe'
+          cmd /C '"C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in "AutoHotkey Script Letters.ahk" /out "AutoHotkey Script Letters.exe"'
+          cmd /C '"C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in "AutoHotkey Script SoundControl.ahk" /out "AutoHotkey Script SoundControl.exe"'
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
