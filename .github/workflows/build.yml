@@ -19,6 +19,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build
         run: |
-          (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk-install.exe", "Installer.exe")
+          (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk-install.exe", (Get-Location).Path + "\Installer.exe");
           .\Installer.exe /S
           cmd /C CompileAndCopy.cmd
