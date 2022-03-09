@@ -21,4 +21,8 @@ jobs:
         run: |
           (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk-install.exe", (Get-Location).Path + "\Installer.exe");
           .\Installer.exe /S
+          dir
+          dir "C:\Program Files"
+          dir "C:\Program Files\AutoHotkey"
+          dir "C:\Windows\System32\"
           cmd /C CompileAndCopy.cmd
