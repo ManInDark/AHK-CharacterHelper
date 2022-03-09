@@ -21,7 +21,7 @@ jobs:
           Expand-Archive .\ahk.zip -DestinationPath .\ahk-extracted\
       - name: Build Letters
         id: build-letters
-        run: cmd /C '".\ahk-extracted\Ahk2Exe.exe" /in "AutoHotkey Script Letters.ahk" /out "AutoHotkey Script Letters.exe"';
+        run: cmd /C '".\ahk-extracted\Compiler\Ahk2Exe.exe" /in "AutoHotkey Script Letters.ahk" /out "AutoHotkey Script Letters.exe"';
       - name: Build SoundControl
         id: build-soundcontrol
-        run: cmd /C '".\ahk-extracted\Ahk2Exe.exe" /in "AutoHotkey Script SoundControl.ahk" /out "AutoHotkey Script SoundControl.exe"';
+        run: cmd /C '".\ahk-extracted\Compiler\Ahk2Exe.exe" /in "AutoHotkey Script SoundControl.ahk" /out "AutoHotkey Script SoundControl.exe"';
