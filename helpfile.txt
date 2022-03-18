@@ -32,6 +32,7 @@ Greek letters:
 
 $Mathematical characters:
   infinity: ∞
+  v*: ×
   average: Ø
   rationalnumbers: ℝ
   naturalnumbers: ℕ
