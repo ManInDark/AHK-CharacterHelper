@@ -9,7 +9,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  Letters:
     runs-on: windows-latest
     steps:
       - name: Checkout Master
@@ -20,6 +20,13 @@ jobs:
         uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
         with:
           script-path: AutoHotkey Script Letters
+  SoundControl:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Master
+        uses: actions/checkout@master
+      - name: Install AutoHotkey
+        uses: ManInDark/AHK-CharacterHelper/Actions/Install-AutoHotkey@master
       - name: Build SoundControl
         uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
         with:
