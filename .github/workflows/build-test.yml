@@ -15,10 +15,7 @@ jobs:
       - name: Checkout Master
         uses: actions/checkout@master
       - name: Install AutoHotkey
-        id: install-autohotkey
-        run: |
-          (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk.zip", (Get-Location).Path + "\ahk.zip");
-          Expand-Archive .\ahk.zip -DestinationPath .\ahk-extracted\
+        uses: ManInDark/AHK-CharacterHelper@master
       - name: Build Letters
         id: build-letters
         run: cmd /C '".\ahk-extracted\Compiler\Ahk2Exe.exe" /in "AutoHotkey Script Letters.ahk" /out "AutoHotkey Script Letters.exe" /silent /base ".\ahk-extracted\Compiler\Unicode 64-bit.bin"';
