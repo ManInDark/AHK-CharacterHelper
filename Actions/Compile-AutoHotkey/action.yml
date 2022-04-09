@@ -1,6 +1,10 @@
 name: Compile AutoHotkey
 description: "Compiles a AutoHotkey Script"
 
+branding:
+  icon: 'archive'
+  color: 'white'
+
 inputs:
   installation-path:
     description: "The path where AutoHotkey is installed"
