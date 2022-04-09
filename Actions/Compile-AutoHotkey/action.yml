@@ -20,8 +20,8 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: ".\${{ inputs.installation-path }}\Compiler\Ahk2Exe.exe" /in "${{ inputs.script-path }}.ahk" /out "${{ inputs.script-path }}.exe" /silent /base ".\ahk-extracted\Compiler\Unicode 64-bit.bin";
-      shell: cmd
+    - run: cmd /C '".\\${{ inputs.installation-path }}\\Compiler\\Ahk2Exe.exe" /in "${{ inputs.script-path }}.ahk" /out "${{ inputs.script-path }}.exe" /silent /base ".\\ahk-extracted\\Compiler\\Unicode 64-bit.bin"';
+      shell: Powershell
     - id: output-path
       run: echo "::set-output name=compiled-path::$(echo ${{ inputs.script-path }}.exe)"
       shell: Powershell
