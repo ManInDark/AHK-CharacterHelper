@@ -1,0 +1,35 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Master
+        id: checkout
+        uses: actions/checkout@master
+      - name: Install AutoHotkey
+        uses: ManInDark/AHK-CharacterHelper/Actions/Install-AutoHotkey@master
+      - name: Build Letters
+        uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
+        with:
+          script-path: AutoHotkey Script Letters
+      - name: Build SoundControl
+        uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
+        with:
+          script-path: AutoHotkey Script SoundControl
+      - name: Build TabletControl
+        uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
+        with:
+          script-path: AutoHotkey Script TabletControl
+      - name: Create Release
+        uses: ncipollo/release-action@v1 # https://github.com/ncipollo/release-action
+        with:
+          artifacts: "*.exe,helpfile.txt"
+          token: ${{ secrets.GITHUB_TOKEN }}

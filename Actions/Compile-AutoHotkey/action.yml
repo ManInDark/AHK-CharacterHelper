@@ -1,0 +1,31 @@
+name: Compile AutoHotkey
+description: "Compiles a AutoHotkey Script"
+
+branding:
+  icon: 'archive'
+  color: 'white'
+
+inputs:
+  installation-path:
+    description: "The path where AutoHotkey is installed"
+    default: "ahk-extracted"
+    required: false
+    type: string
+  script-path:
+    description: "The path of the AutoHotkey Script to compile - without .ahk Extension"
+    required: true
+    type: string
+
+outputs:
+  compiled-path:
+    description: "Path of the compiled script"
+    value: ${{ steps.output-path.outputs.compiled-path }}
+
+runs:
+  using: "composite"
+  steps:
+    - run: cmd /C '".\\${{ inputs.installation-path }}\\Compiler\\Ahk2Exe.exe" /in "${{ inputs.script-path }}.ahk" /out "${{ inputs.script-path }}.exe" /silent /base ".\\ahk-extracted\\Compiler\\Unicode 64-bit.bin"';
+      shell: Powershell
+    - id: output-path
+      run: echo "::set-output name=compiled-path::$(echo ${{ inputs.script-path }}.exe)"
+      shell: Powershell

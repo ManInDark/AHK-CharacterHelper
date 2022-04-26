@@ -1,0 +1,23 @@
+name: Install Autohotkey
+description: "Installs AutoHotkey"
+
+branding:
+  icon: 'download'
+  color: 'white'
+
+inputs:
+  path:
+    description: "The path where to install AutoHotkey"
+    default: "ahk-extracted"
+    required: false
+    type: string
+
+runs:
+  using: "composite"
+  steps:
+    - run: (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk.zip", (Get-Location).Path + "\ahk.zip");
+      shell: Powershell
+    - run: Expand-Archive .\ahk.zip -DestinationPath .\${{ inputs.path }}\
+      shell: Powershell
+    - run: Remove-Item .\ahk.zip
+      shell: Powershell
