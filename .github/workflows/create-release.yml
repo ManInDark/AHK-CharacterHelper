@@ -1,17 +1,13 @@
 name: Create Release
 
 on:
-  workflow_run:
-    workflows: [Build Test]
-    types:
-      - completed
+  push:
     tags:
       - v*
 
 jobs:
   build:
     runs-on: windows-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     permissions:
       contents: write
     steps:
