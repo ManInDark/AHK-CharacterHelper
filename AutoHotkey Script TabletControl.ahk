@@ -12,11 +12,11 @@ switch := false
 
 #IfWinActive, ahk_exe ONENOTE.EXE
 
-Menu, Tray, Add, Register F13, F13Presser
+Menu, Tray, Add, Register F12 Combination, KeyPresser
 
-$F13::
-    Sleep, 200
-    if (A_ThisHotkey = A_PriorHotkey AND A_TimeSincePriorHotkey - 200 < 200 AND NOT skip)
+$^+!F12::
+    Sleep, 300
+    if (A_ThisHotkey = A_PriorHotkey AND A_TimeSincePriorHotkey - 300 < 300 AND NOT skip)
     {
         skip := true
         Send, {Alt}
@@ -34,10 +34,10 @@ $F13::
     } else if (skip = true)
         skip := false
     else
-        Send, {F13}
+        Send, {^+!F12}
 return
 
-F13Presser:
-Sleep, 2000
-Send, {F13}
+KeyPresser:
+Sleep, 4000
+SendEvent, {^+!F12}
 return
