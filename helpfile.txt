@@ -64,6 +64,7 @@ Formatting characters:
   downstretchy: ⏟
   array: █
 $Other characters:
+  !?: ‽
   ohm: Ω
   female: ♀
   male: ♂
