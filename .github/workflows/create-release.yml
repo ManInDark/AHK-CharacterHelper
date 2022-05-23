@@ -28,6 +28,10 @@ jobs:
         uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
         with:
           script-path: AutoHotkey Script TabletControl
+      - name: Build Wallpaper
+        uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
+        with:
+          script-path: AutoHotkey Script Wallpaper
       - name: Create Release
         uses: ncipollo/release-action@v1 # https://github.com/ncipollo/release-action
         with:

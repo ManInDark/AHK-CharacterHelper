@@ -27,6 +27,12 @@ This script allows for quickly switching between tools in OneNote. Probably has 
 
 ---
 
+## Wallpaper
+
+This is a prank script which takes a screenshot and replaces the wallpaper with it.
+
+---
+
 # Installation
 
 In case you want to use the scripts without modifying them and without installing AutoHotkey you can simply download them from the most recent release. If you already have AutoHotkey installed, you can just download the .ahk Files from the newest successful commit too.

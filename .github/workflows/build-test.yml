@@ -39,3 +39,14 @@ jobs:
         uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
         with:
           script-path: AutoHotkey Script TabletControl
+  Wallpaper:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Master
+        uses: actions/checkout@master
+      - name: Install AutoHotkey
+        uses: ManInDark/AHK-CharacterHelper/Actions/Install-AutoHotkey@master
+      - name: Build TabletControl
+        uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
+        with:
+          script-path: AutoHotkey Script Wallpaper
