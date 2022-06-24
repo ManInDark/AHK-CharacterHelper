@@ -41,6 +41,8 @@ $Mathematical characters:
   partof: ⊆
   ringoperator: ∘
   squareroot: √
+  unite: ∪
+  both: ∩
   forbidden: ↯
   vertical_from: ⊤
   vertical_on: ⊥
