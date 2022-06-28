@@ -32,8 +32,10 @@ Greek letters:
 
 $Mathematical characters:
   infinity: ∞
+  bar: ̄
   v*: ×
   average: Ø
+  vector: ⃗
   rationalnumbers: ℝ
   naturalnumbers: ℕ
   definitionset: ⅅ
