@@ -51,12 +51,20 @@ $Mathematical characters:
   !=: ≠
   <=: ≤
   >=: ≥
+  <<: ≪
+  >>: ≫
   ~=: ≈
   ^=: ≙
   ?=: ≟
   +-: ±
 
-Formatting characters:
+Other characters:
+  !?: ‽
+  ohm: Ω
+  female: ♀
+  male: ♂
+
+$Formatting characters:
   delimiter_open: ├
   delimiter_close: ┤
   upthingy: ┴
@@ -67,11 +75,6 @@ Formatting characters:
   upstretchy: ⏞
   downstretchy: ⏟
   array: █
-$Other characters:
-  !?: ‽
-  ohm: Ω
-  female: ♀
-  male: ♂
 
 Arrows
   |-<: ↤
