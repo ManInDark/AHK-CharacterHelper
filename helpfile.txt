@@ -45,6 +45,7 @@ $Mathematical characters:
   squareroot: √
   unite: ∪
   both: ∩
+  integral: ∫
   forbidden: ↯
   vertical_from: ⊤
   vertical_on: ⊥
