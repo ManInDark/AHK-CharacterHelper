@@ -73,6 +73,7 @@ $Formatting characters:
   encase: ▭
   overbar: ¯
   underbar: ▁
+  encircle: ⬭
   upstretchy: ⏞
   downstretchy: ⏟
   array: █
