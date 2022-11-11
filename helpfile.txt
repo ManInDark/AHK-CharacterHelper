@@ -30,6 +30,12 @@ Greek letters:
   sho: ϸ
   san: ϻ
 
+Encircled characters:
+  (1): ①
+  1 - 20
+  A - Z
+  a - z
+
 $Mathematical characters:
   infinity: ∞
   bar: ̄
