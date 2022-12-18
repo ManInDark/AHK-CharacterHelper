@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@master
       - name: Install AutoHotkey
         uses: ManInDark/AHK-CharacterHelper/Actions/Install-AutoHotkey@master
+        with:
+          create-cache: true
       - name: Build Letters
         uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
         with:

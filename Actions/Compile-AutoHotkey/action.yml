@@ -10,11 +10,9 @@ inputs:
     description: "The path where AutoHotkey is installed"
     default: "ahk-extracted"
     required: false
-    type: string
   script-path:
     description: "The path of the AutoHotkey Script to compile - without .ahk Extension"
     required: true
-    type: string
 
 outputs:
   compiled-path:

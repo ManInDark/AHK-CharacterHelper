@@ -1,4 +1,5 @@
 name: Install Autohotkey
+author: ManInDark
 description: "Installs AutoHotkey"
 
 branding:
@@ -10,14 +11,27 @@ inputs:
     description: "The path where to install AutoHotkey"
     default: "ahk-extracted"
     required: false
-    type: string
+  create-cache:
+    description: "Whether a cache for AutoHotkey should be created"
+    default: "false"
+    required: false
 
 runs:
   using: "composite"
   steps:
+    - name: Cache AutoHotkey
+      uses: actions/cache@v3
+      id: cache
+      if: ${{ inputs.create-cache }} == "true"
+      with:
+        path: .\${{ inputs.path }}\
+        key: AutoHotkey
     - run: (New-Object System.Net.WebClient).DownloadFile("https://www.autohotkey.com/download/ahk.zip", (Get-Location).Path + "\ahk.zip");
+      if: steps.cache.outputs.cache-hit != 'true'
       shell: Powershell
     - run: Expand-Archive .\ahk.zip -DestinationPath .\${{ inputs.path }}\
+      if: steps.cache.outputs.cache-hit != 'true'
       shell: Powershell
     - run: Remove-Item .\ahk.zip
+      if: steps.cache.outputs.cache-hit != 'true'
       shell: Powershell
