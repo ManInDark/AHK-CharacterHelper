@@ -13,7 +13,14 @@ doSearch(){
 }
 
 a::
-Loop, 30 {
+Loop, 31 {
+	doSearch()
+	Sleep, 200
+}
+Send, {F12}
+Sleep, 100
+Send, ^+m
+Loop, 21 {
 	doSearch()
 	Sleep, 200
 }
