@@ -30,6 +30,10 @@ jobs:
         uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
         with:
           script-path: AutoHotkey Script TabletControl
+      - name: Build BingSearcher
+        uses: ManInDark/AHK-CharacterHelper/Actions/Compile-AutoHotkey@master
+        with:
+          script-path: AutoHotkey Script BingSearcher
       - name: Create Release
         uses: ncipollo/release-action@v1 # https://github.com/ncipollo/release-action
         with:
